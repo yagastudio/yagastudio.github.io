@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="scss/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=REM:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <title>Yaga Studio</title>
+</head>
+<body>
+    <header>
+        <div class="logo-wraper">
+            <img src="svg/yaga-white.svg" alt="Yaga Logo">
+            <h1>Yaga Studio</h1>
+        </div>
+    </header>
+    <main>
+        <div class="team-wraper">
+            <img class="team-eating" src="img/eating-small.png">
+            <section class="team">
+                <figure>
+                    <img src="svg/Tri.svg" alt="Tri">
+                    <figcaption class="normal">Tri Nguyen</figcaption>
+                    <figcaption class="hover"><strong>Tri</strong> is our <strong>3D Technical Artist</strong>.<br/><br/>Is the digital sculptor and puppet master of our virtual worlds with <strong>Unity3D</strong> and <strong>Blender</strong> mastery.</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="svg/Huyen.svg" alt="Huyen">
+                    <figcaption class="normal">Huyen Hoang</figcaption>
+                    <figcaption class="hover"><strong>Huyen</strong> is our <strong>2D Graphics Designer</strong>.<br/><br/>Crafter of sleek <strong>designs</strong>, intuitive <strong>interfaces</strong>, and <strong>2D animations</strong> across <strong>digital</strong> and <strong>printed</strong> realms.</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="svg/Vivi.svg" alt="Vivi">
+                    <figcaption class="normal">Viviana Hochstätter</figcaption>
+                    <figcaption class="hover"><strong>Vivi</strong> is our <strong>Producer</strong>.<br/><br/>She is expertly <strong>coordinating multidisciplinary teams</strong> with the <strong>precision</strong> of Robin Hood's arrow splitting an apple.</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="svg/Katharina.svg" alt="Katharina">
+                    <figcaption class="normal">Katharina Weser</figcaption>
+                    <figcaption class="hover"><strong>Katharina</strong> is our <strong>Executive Producer</strong>.<br/><br/>She expertly navigates the seas of <strong>budgeting</strong> and <strong>financing</strong> to anchor projects with prosperity.</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="svg/Georg.svg" alt="Georg">
+                    <figcaption class="normal">Georg Neubert</figcaption>
+                    <figcaption class="hover"><strong>Georg</strong> is our <strong>Executive Producer</strong> and <strong>Story Developer</strong>.<br/><br/>Master <strong>storyteller</strong> and <strong>connector</strong>, molding <strong>ideas into reality</strong> with a creative spark.</figcaption>
+                </figure>
+
+
+                <figure>
+                    <img src="svg/Julio.svg" alt="Julio">
+                    <figcaption class="normal">Julio Quiroz</figcaption>
+                    <figcaption class="hover"><strong>Julio</strong> is our <strong>Head of Development</strong>.<br/><br/><strong>Unity3D</strong> and <strong>technology</strong> wizard conjuring immersive experiences with touches of <strong>shader</strong> sorcery.</figcaption>
+                </figure>
+            </section>
+        </div>
+        <section class="description">
+            <div class="not-eating">
+                <p><em>Hi there!</em><br/><br/>We are a <strong>multicultural team</strong> pushing creative boundaries by <strong>crafting content</strong> in a variety of areas: <strong>Cinema</strong>, <strong>Games</strong>, and <strong>XR Experiences</strong>.</p>
+            </div>
+            <div class="eating">
+                <!-- <img src="img/eating-small.png" /> -->
+                <p>(We also love to cook for each other)</p>
+            </div>
+        </section>
+        
+    </main>
+    <footer>
+        <p><strong>Yaga Studio GmbH</strong><br/>📌 Plautstraße 27-29, 04179 Leipzig, Germany</p>
+    </footer>
+    <script>
+        $(document).ready(function(){
+            $('.eating').fadeOut(0);
+            
+            $('.description').hover(
+                function(){ 
+                    $('.not-eating').stop(true, true).fadeOut(0);
+                    $('.team').stop(true, true).fadeOut(0); 
+                    $('.eating').stop(true, true).delay(100).fadeIn(200);
+                    $('.team-eating').stop(true, true).delay(100).fadeIn(200); 
+                },
+                function(){ 
+                    $('.team-eating').stop(true, true).fadeOut(0); 
+                    $('.eating').stop(true, true).fadeOut(0);
+                    $('.team').stop(true, true).delay(100).fadeIn(200); 
+                    $('.not-eating').stop(true, true).delay(100).fadeIn(200);
+                }
+            );
+
+            $('figure').find('.hover').fadeOut(0);
+            $('figure').hover(function(){
+                $(this).find('img').fadeOut(0);
+                $(this).find('.normal').fadeOut(0);
+                $(this).find('.hover').fadeIn(200);
+            }, function(){
+                $(this).find('.hover').fadeOut(0);
+                $(this).find('img').fadeIn(200);
+                $(this).find('.normal').fadeIn(200);
+            });
+
+
+        });
+    </script>
+
+</body>
+</html>
