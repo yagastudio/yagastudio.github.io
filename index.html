@@ -14,8 +14,10 @@
 <body>
     <header>
         <div class="logo-wraper">
-            <img src="svg/yaga-white.svg" alt="Yaga Logo">
-            <h1>Yaga Studio</h1>
+            <a href="https://yagastudio.com">
+                <img src="svg/yaga-white.svg" alt="Yaga Logo">
+                <h1>Yaga Studio</h1>
+            </a>
         </div>
     </header>
     <main>
@@ -72,7 +74,18 @@
         
     </main>
     <footer>
-        <p><strong>Yaga Studio GmbH</strong><br/>📌 Plautstraße 27-29, 04179 Leipzig, Germany</p>
+        <div class="footer-wrapper">
+            <div class="yaga-details">
+                <a href="https://yagastudio.com">Yaga Studio GmbH</a><br/>
+                <a href="https://maps.app.goo.gl/4KPbTSWQSUxA5wgu6">📌 Plautstraße 27-29, 04179 Leipzig, Germany</a>
+            </div>
+            <div class="splitter"></div>
+            <div class="endorsed-by">
+                <p><a href="https://www.mdm-online.de/index.php?id=327">Endorsed by</a></p>
+                <a href="https://www.mdm-online.de/index.php?id=327"><img src="img/media-start-logo.png" /></a>
+            </div>
+            
+        </div>
     </footer>
     <script>
         $(document).ready(function(){
@@ -103,8 +116,6 @@
                 $(this).find('img').fadeIn(200);
                 $(this).find('.normal').fadeIn(200);
             });
-
-
         });
     </script>
 
