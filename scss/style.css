@@ -77,6 +77,23 @@ main {
   height: calc(100% - 200px);
 }
 
+@media (max-width: 1024px) {
+  .logo-wraper {
+    width: 100%;
+    max-width: inherit;
+  }
+  main {
+    flex-direction: column;
+    max-width: inherit;
+    width: 100%;
+  }
+  body {
+    min-width: inherit;
+  }
+  footer .footer-wrapper {
+    width: 100%;
+  }
+}
 .team-wraper {
   flex: 0.5;
   justify-content: center;

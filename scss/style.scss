@@ -72,8 +72,6 @@ header {
     }
 }
 
-
-
 main {
     padding: 20px;
     max-width: 1024px;
@@ -81,7 +79,26 @@ main {
     display:flex;
     position: relative;
     height: calc(100% - 200px);
+    
 }
+@media (max-width:1024px) {
+    .logo-wraper{
+        width: 100%;
+        max-width: inherit;
+    }
+    main{
+        flex-direction: column;
+        max-width: inherit;
+        width: 100%;
+    }
+    body{
+        min-width: inherit;
+    }
+    footer .footer-wrapper {
+        width: 100%;
+    }
+}
+
 
 
 .team-wraper{
